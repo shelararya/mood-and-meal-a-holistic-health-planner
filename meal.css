@@ -1,0 +1,326 @@
+/* === Body and Typography === */
+body.meal-body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: #ffffff;
+  color: #2e707d;
+  padding: 20px;
+}
+
+/* === Header Title === */
+.meal-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2e6d7d;
+  margin-bottom: 30px;
+}
+/* === Navigation Bar  === */
+header {
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; 
+  padding: 8px 20px; 
+  position: relative;
+}
+
+/* Logo in Center - smaller */
+.logo {
+  font-size: 32px; 
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu Button Right - smaller */
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 17px; 
+  padding: 8px 20px; /* smaller padding */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Back Button Left - smaller */
+.back-button {
+  position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 17px; 
+  padding: 8px 20px; /* smaller padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background-color:#416577;
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  transition: right 0.4s ease;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.slide-menu.active {
+  right:0;
+}
+
+.slide-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 70px;
+  font-size: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.About, .Articles, .Book, .Contact {
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topnav a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* === Routine Selector === */
+.routine-selector {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.routine-selector label {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #2e7d7d;
+}
+
+.routine-selector select {
+  padding: 10px 15px;
+  font-size:22px;
+  border-radius: 10px;
+  background-color: #dce5f1;
+  color: #2e547d;
+  border: 1px solid #2e657d;
+}
+
+/* === Meal Cards Layout === */
+.food-grid {
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.food-card {
+  background: #e8eef7;;
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+  height:600px;
+  color: #0f748a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  background: #c3d5ec;;
+}
+
+.food-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.food-card h3 {
+  color: #2e5b7d;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.food-card p {
+  font-size: 22px;
+  margin: 6px 15px;
+  line-height: 1.4;
+}
+
+.food-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 15px 15px;
+}
+
+.food-card li {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.food-card .do {
+  color: #2e6b7d;
+}
+
+.food-card .dont {
+  color: #d32f2f;
+}
+
+/* === Responsive Cards === */
+@media (max-width: 768px) {
+  .food-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-card {
+    width: 90%;
+  }
+}
+
+/* === Weekly Meal Planner Link === */
+.meal-planner-link {
+  background-color: #dce5f1;;
+  border: 1px solid #2e6e7d;
+  padding: 20px;
+  margin: 30px auto;
+  width: 890px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+}
+
+.meal-planner-link h1 {
+  color: #2e5c7d;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.meal-planner-link p {
+  font-size:25px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.btn-meal-planner {
+  background-color: #2e597d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 27px;
+  transition: background 0.3s ease;
+}
+
+.btn-meal-planner:hover {
+  background-color: #1b5a5e;
+}
+
+.Backbtn{
+  color:white;
+  background-color: #2e587d;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 25px;
+  align-items: center;
+  position: absolute;  
+  text-align: center;
+  left:940px;
+  right:940px;
+}
+
+.Backbtn:hover {
+  background-color:#dce5f1; ;
+  color:black;
+} 
+
+/* === Tab Buttons === */
+.tab-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-buttons button {
+    padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #2e7d7d;
+  color: #2e7d7d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.tab-buttons button:hover,
+.tab-buttons button.active {
+  background-color: #2e7d7d;
+  color: #ffffff;
+}
+
+/* === Tab Content Sections === */
+.tab-section {
+    display: none;
+  padding: 20px;
+  background: #dce5f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.1);
+
+}
+
+.tab-section.active {
+    display: block;
+}
+
+

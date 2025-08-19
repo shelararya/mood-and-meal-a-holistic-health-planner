@@ -1,0 +1,323 @@
+/* === Base Styles === */
+body {
+  background-color: #ffffff;
+  color: #2e7d7d;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header with Back, Logo, Menu */
+header {
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 8px 20px; 
+  position: relative;
+}
+
+/* Logo in Center - smaller */
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu Button Right - smaller */
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 17px; 
+  padding: 8px 20px; /* smaller padding */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Back Button Left - smaller */
+.back-button {
+  position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 17px; 
+  padding: 6px 14px; /* smaller padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background-color:#416577 ;
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  transition: right 0.4s ease;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.slide-menu.active{
+  right:0;
+}
+
+.slide-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 70px;
+  font-size: 25px;
+}
+
+/* Close Button inside menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.About{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Articles{
+  display :block;
+  text-align: center;
+}
+
+.Book{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Contact{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+/* === Tab Section === */
+.tab-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #2e7d7d;
+  color: #2e7d7d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: #2e7d7d;
+  color: #ffffff;
+}
+
+/* === Tab Content === */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background: #dce5f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.1);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === Breathing Section === */
+.breathing-container {
+  margin-top: 20px;
+}
+
+#Breath{
+  font-size: 35px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(46, 125, 50, 0.2);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #2e7d7d;
+  transition: all 4s ease-in-out;
+}
+
+.breathing-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2e7d7d;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* === Meditation Section === */
+/* === Meditation Section === */
+.poses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+#Meditation {
+  font-size: 35px;
+  text-align: center;
+}
+
+.pose-card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px; /* Needed for 3D flip */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.pose-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-front img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-front h3, .card-back h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.card-back {
+  background: rgba(157, 188, 193, 0.7); /* keeps dark theme */
+  color: #0f0f0f;
+  transform: rotateY(180deg);
+}
+
+.card-back ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* === Music Section === */
+.music iframe {
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #dce5f1;
+}
+
+#Music{
+  font-size: 35px;
+}
+
+.quiz-link {
+  display: inline-block;
+  background-color: #2e7d7d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  writing-mode: horizontal-tb !important; /* prevent vertical text */
+  transform: none !important; /* remove any accidental rotation */
+  text-decoration: none;
+}
+
+.quiz-link:hover {
+  background-color: #1d4d4d;
+}
+
+.Backbtn{
+  position: absolute;
+  left: 40px;
+  background-color: transparent;
+  border: 1px solid #ffffff;  /* thinner border */
+  color: white;
+  font-size: 17px;            /* smaller text */
+  padding: 8px 20px;          /* less padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Backbtn:hover {
+  background-color:#dce5f1 ;
+  color:black;
+} 
+

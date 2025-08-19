@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Meals</title>
+  <link rel="stylesheet" href="meal.css" />
+</head>
+<body class="meal-body">
+
+  <!-- Header with Menu Button -->
+  <header>
+    <a class="back-button" href="Mood&MealSelection.html"><b>← Back</b></a>
+    <div class="logo">Healthy meal Planner</div>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+  <!-- Slide-in Menu -->
+  <div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <br>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="Articles"><a href="Articles.html">Articles</a></div><br>
+    <div class="Book"><a href="Book.html">Book</a></div><br>
+    <div class="About"><a href="AboutUs.html">About Us</a></div><br>
+    <div class="Contact"><a href="ContactUs.html">Contact Us</a></div>
+  </div>
+
+  <br>
+
+  <!-- Tabs: PASS this to switchTab so JS knows which button was clicked -->
+  <div class="tab-buttons">
+    <button class="active" onclick="switchTab('daily', this)">🍽 Daily Routine Meals</button>
+    <button onclick="switchTab('weekly', this)">📅 Weekly Plan</button>
+    <button class="budget-btn" onclick="switchTab('budget', this)">💰 Budget Meals</button>
+  </div>
+
+  
+
+  <!-- Daily Routine Meals -->
+  <div id="daily" class="tab-section active">
+    <div class="meal-container">
+
+      <div class="routine-selector">
+        <label for="routine">Select Your Daily Routine:</label>
+        <select id="routine" onchange="loadMealPlan()">
+          <option value="">-- Choose --</option>
+          <option value="student">🎓 Student</option>
+          <option value="gym">🏋 Gym-Goer</option>
+          <option value="yoga">🧘 Yoga/Meditation</option>
+          <option value="deskjob">💻 Desk Job</option>
+          <option value="recovery">🩺 Recovering</option>
+        </select>
+      </div>
+
+      <div id="customMealPlan" class="food-grid"></div>
+    </div>
+  </div>
+
+  <!-- Weekly Plan -->
+  <div id="weekly" class="tab-section">
+    <iframe id="weeklyFrame" src="mealplanner.html" width="100%" height="500px" style="border:none;"></iframe>
+  </div>
+
+<!-- Budget-Based Meal Suggestions -->
+<div id="budget" class="tab-section">
+  <iframe id="budgetFrame" src="personalization.html" width="100%" height="500px" style="border:none;"></iframe>
+</div>
+
+  
+
+  
+  <!-- JS Script -->
+  <script>
+    // menu open/close
+    function openMenu() { document.getElementById("sideMenu").classList.add("active"); }
+    function closeMenu() { document.getElementById("sideMenu").classList.remove("active"); }
+
+    // SWITCH TAB: safe, simple — called as switchTab('id', this)
+    function switchTab(tabId, btnElement) {
+      // hide all sections
+      const sections = document.querySelectorAll('.tab-section');
+      sections.forEach(s => s.classList.remove('active'));
+      // deactivate all tab buttons
+      const tabBtns = document.querySelectorAll('.tab-buttons button');
+      tabBtns.forEach(b => b.classList.remove('active'));
+
+      // activate requested section
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+      // mark clicked button active (btnElement is this from HTML)
+      if (btnElement) btnElement.classList.add('active');
+    }
+
+    // OPTIONAL: ensure first tab is active on load (defensive)
+    window.addEventListener('DOMContentLoaded', () => {
+      // if no section has .active, default to daily
+      if (!document.querySelector('.tab-section.active')) {
+        switchTab('daily', document.querySelector('.tab-buttons button'));
+      }
+    });
+
+    // NOTE: loadMealPlan() should be provided by your existing meal.js.
+    // If you don't have it yet, you can define a simple placeholder:
+    function loadMealPlan() {
+      const sel = document.getElementById('routine');
+      const plan = document.getElementById('customMealPlan');
+      if (!sel || !plan) return;
+      // simple placeholder output (replace with your real implementation)
+      plan.innerHTML = `<div class="food-card"><h3>Selected: ${sel.value || 'None'}</h3>
+        <p style="font-size:18px; padding:8px;">Your meal plan will appear here.</p></div>`;
+    }
+  </script>
+   <script src="meal.js"></script>
+</body>
+</html>

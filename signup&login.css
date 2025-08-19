@@ -1,0 +1,121 @@
+/* Reset & base styles */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 23px;
+  background-color: #ffffff; /* White background */
+  color: #194872; /* Dark purple text */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  height: 500px;
+  padding: 20px;
+}
+
+.top {
+  height: 50px;
+  background-color: #416577;
+  display: flex;
+  font-size: 17px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+#head{
+  color: black;
+}
+
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(197, 222, 204, 0.2); /* Light overlay with #c5dec tint */
+  z-index: -1;
+}
+
+.auth-container {
+  background: #dce5f1; /* Light blue container */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px; /* Added space below the top bar */
+}
+
+.auth-container p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #101121; /* Soft dark text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 480px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #2e367d;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #2e3b7d;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: 2px solid #2e3a7d;
+}
+
+button {
+  width: 505px;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #194872;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #385c7b; /* Darker hover */
+}
+
+/* Link style */
+a {
+  display: block;
+  margin-top: 15px;
+  color: #314cfa;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 25px;
+  }
+
+  .auth-container h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}

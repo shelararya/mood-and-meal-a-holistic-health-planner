@@ -1,0 +1,197 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #edf2f9; 
+  margin: 0;
+  padding: 0;
+}
+
+/* === Navigation Bar (Reduced Height) === */
+header {
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* reduced from 110px */
+  padding: 8px 20px; /* less padding */
+  position: relative;
+}
+
+/* Logo in Center - smaller */
+.logo {
+  font-size: 32px; /* reduced from 50px */
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu Button Right - smaller */
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 16px; /* reduced */
+  padding: 8px 20px; /* smaller padding */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Back Button Left - smaller */
+.back-button {
+  position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 16px; /* reduced */
+  padding: 8px 20px; /* smaller padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background-color:#416577 ;
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  transition: right 0.4s ease;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.slide-menu.active{
+  right:0;
+}
+
+.slide-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 70px;
+  font-size: 25px;
+}
+
+/* Close Button inside menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.About{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Articles{
+  display :block;
+  text-align: center;
+}
+
+.Book{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Contact{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+/* Responsive Topnav */
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topnav a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.planner-container {
+  height:100px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #dce5f1;; /* Light background for contrast */
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin: 20px 0 10px;
+  font-size: 25px;
+  color: #0f2b36; /* Label text color */
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #dce5f1;;
+  background: #ffffff; /* White dropdown */
+  color: #2e5f7d;
+  font-size: 18px;
+}
+
+.meal-display {
+  margin-top: 30px;
+}
+
+.meal-card {
+  height: 100px;
+  background-color: #dce5f1;; /* Soft green background */
+  border-left: 4px solid #2e5c7d;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.meal-card h3 {
+  margin-bottom: 5px;
+  color: #2e5c7d;
+}
+
+.meal-card p {
+  margin: 0;
+  color: #20333d;
+}
+
+.Backbtn{
+  color:white;
+  background-color: #2e5c7d;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 25px;
+  align-items: center;
+  position: absolute;  
+  text-align: center;
+  left:950px;
+  right:950px;
+}
+
+.Backbtn:hover {
+  background-color:#dce5f1; ;
+  color:black;
+} 

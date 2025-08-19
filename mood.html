@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood & Mental Wellness</title>
+  <link rel="stylesheet" href="mood.css" />
+</head>
+<body>
+ 
+    <!-- Header with Menu Button -->
+  <header>
+<a class="back-button" href="Mood&MealSelection.html"><b>← Back</b></a>
+    <div class="logo">Mood & Mental Wellness</div>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+  <!-- Slide-in Menu -->
+  <div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <br>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="About">
+      <a href="Articles.html">Articles</a>
+    </div>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    <div class="About">
+      <a href="AboutUs.html">About Us</a>
+    </div>
+    
+    <br>
+    <div class="Contact">
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+    <br>
+    
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+    }
+  </script>
+
+  <div class="tab-section">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="showTab('breathing-tab', event)">🫁Breathing</button>
+      <button class="tab-btn" onclick="showTab('meditation-tab', event)">🧘‍♀Meditation</button>
+      <button class="tab-btn" onclick="showTab('music-tab', event)">🎵Music</button>
+      <button class="tab-btn" onclick="showTab('quiz-tab', event)">📝Quiz</button>
+    </div>
+
+    <!-- Breathing Section -->
+    <div id="breathing-tab" class="tab-content active">
+      <h2 id="Breath">Breathing Exercise</h2>
+      <br>
+      <div class="breathing-container">
+        <div class="circle" id="breathing-circle">Ready</div>
+        <br><br>
+        <button onclick="startBreathing()">Start</button>
+        <button onclick="stopBreathing()">Stop</button>
+      </div>
+    </div>
+
+    <!-- Meditation Section -->
+<div id="meditation-tab" class="tab-content">
+  <h2 id="Meditation">Meditation Poses</h2>
+  <div class="poses">
+
+    <!-- Vajrasana -->
+    <div class="pose-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="vajrasana.jpeg" alt="Vajrasana">
+          <h3>Vajrasana (Thunderbolt Pose)</h3>
+        </div>
+        <div class="card-back">
+          <h3>Vajrasana</h3>
+          <ul>
+            <li>Improves digestion</li>
+            <li>Strengthens lower back</li>
+            <li>Calms the mind</li>
+            <li><b>How to:</b> Sit on heels, spine straight, hands on thighs</li>
+            <li><b>Duration:</b> 5–10 min after meals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Viparita Karani -->
+    <div class="pose-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="viparitakarani.jpeg" alt="Viparita Karani">
+          <h3>Viparita Karani (Legs up the Wall Pose)</h3>
+        </div>
+        <div class="card-back">
+          <h3>Viparita Karani</h3>
+          <ul>
+            <li>Relieves tired legs</li>
+            <li>Reduces stress</li>
+            <li>Improves blood circulation</li>
+            <li><b>How to:</b> Lie near wall, lift legs up, arms relaxed</li>
+            <li><b>Duration:</b> 10–15 min</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Padmasana -->
+    <div class="pose-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="padmasana.jpg" alt="Padmasana">
+          <h3>Padmasana (Lotus Pose)</h3>
+        </div>
+        <div class="card-back">
+          <h3>Padmasana</h3>
+          <ul>
+            <li>Enhances concentration</li>
+            <li>Improves posture</li>
+            <li>Deepens meditation</li>
+            <li><b>How to:</b> Cross legs, feet on thighs, back straight</li>
+            <li><b>Duration:</b> 2–3 min, increase gradually</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <!-- Music Section -->
+    <div id="music-tab" class="tab-content">
+      <h2 id="Music">Relaxing Music</h2>
+      <div class="music">
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/2OEL4P1Rz04" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/1ZYbU82GVz4" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/UfcAVejslrU" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/DWcJFNfaw9c" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-tab" class="tab-content">
+      <h2 id="Quiz">Stress Level Quiz</h2>
+      <p id="quiz-p">Check your current stress level and get suggestions to improve your mood.</p>
+      <a href="quiz.html" class="quiz-link">Take the Quiz</a>
+    </div>
+  </div>
+  
+
+
+  <script>
+  let isBreathing = false;
+  let breathTimeout = null;
+  const circle = document.getElementById('breathing-circle');
+
+  function startBreathing() {
+    if (isBreathing) return;
+    isBreathing = true;
+    let step = 0;
+    const steps = ['Inhale', 'Hold', 'Exhale', 'Hold'];
+    const times = [4000, 2000, 4000, 2000];
+
+    function breatheCycle() {
+      if (!isBreathing) return; // stop if breathing is canceled
+
+      circle.textContent = steps[step];
+      circle.style.transform =
+        step === 0 ? 'scale(1.5)' : step === 2 ? 'scale(1)' : 'scale(1.25)';
+
+      breathTimeout = setTimeout(() => {
+        step = (step + 1) % steps.length;
+        breatheCycle();
+      }, times[step]);
+    }
+
+    breatheCycle();
+  }
+
+  function stopBreathing() {
+    isBreathing = false;
+    clearTimeout(breathTimeout);
+    circle.textContent = "Stop";
+    circle.style.transform = "scale(1)";
+  }
+
+  function showTab(tabId, event) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>

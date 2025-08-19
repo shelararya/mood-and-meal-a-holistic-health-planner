@@ -1,0 +1,214 @@
+/* === Body and Overall Theme === */
+body {
+  background-color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Header with Back, Logo, Menu */
+/* === Navigation Bar (Reduced Height) === */
+header {
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* reduced from 110px */
+  padding: 8px 20px; /* less padding */
+  position: relative;
+}
+
+/* Logo in Center - smaller */
+.logo {
+  font-size: 32px; 
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu Button Right - smaller */
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 17px; 
+  padding: 8px 20px; /* smaller padding */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Back Button Left - smaller */
+.back-button {
+  position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 16px;
+  padding: 8px 20px; /* smaller padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background-color:#416577 ;
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  transition: right 0.4s ease;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.slide-menu.active{
+  right:0;
+}
+
+.slide-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 70px;
+  font-size: 25px;
+}
+
+/* Close Button inside menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.About{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Articles{
+  display :block;
+  text-align: center;
+}
+
+.Book{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Contact{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+/* === Quiz Container === */
+.quiz-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #dce5f1;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(46, 125, 50, 0.2);
+}
+
+/* === Question Styles === */
+.question {
+  margin-bottom: 20px;
+}
+/* #2e7d32 */
+.question label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 25px;
+}
+
+/* === Select Dropdown === */
+select {
+  font-size: 19px;
+  height:60px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #2e7d7d;
+  border: 1px solid #2e7d7d;
+  border-radius: 8px;
+}
+
+/* === Submit Button === */
+button {
+  padding: 12px 25px;
+  background-color: #416577;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e4e5e;
+}
+
+/* === Result Box === */
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #2e7d7d;
+  color: #2e7d7d;
+  display: none;
+}
+
+.result h2 {
+  color: #2e7d7d;
+  margin-bottom: 10px;
+}
+
+.result a {
+  color: #1e575e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Backbtn{
+  color:white;
+  background-color: #416577;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 25px;
+  align-items: center;
+  position: absolute;  
+  text-align: center;
+  left:940px;
+  right:940px;
+}
+
+.Backbtn:hover {
+  background-color:#dce5f1 ;
+  color:black;
+} 

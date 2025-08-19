@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* Header #dce7d5 #f5efe6*/
+header {
+  background-color: #416577;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;           
+  padding: 8px 20px;      
+  z-index: 10;
+}
+
+.logo {
+  font-size: 30px;         
+  font-weight: 600;       
+  color: #ffffff;
+  text-align: center;
+}
+/* Menu Button */
+.menu-btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Slide Menu */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color:#416577 ;
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  transition: right 0.4s ease;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.slide-menu.active{
+  right:0;
+}
+
+.slide-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 70px;
+  font-size: 25px;
+}
+
+/* Close Button inside menu */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('mood and meal image4.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #416577;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+
+
+.hero-content h1 {
+  font-size: 62px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.About{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Articles{
+  display :block;
+  text-align: center;
+}
+
+.Book{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.Contact{
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+
+.btn {
+  font-size: 20px;
+  background-color:  #416577;
+  color: rgb(255, 255, 255);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color:#194872 ;
+}

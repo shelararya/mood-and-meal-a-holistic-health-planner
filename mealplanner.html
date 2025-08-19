@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7-Day Meal Planner</title>
+  <link rel="stylesheet" href="mealplanner.css" />
+</head>
+<body>
+  <!-- Slide-in Menu -->
+  <div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <br>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="Articles">
+      <a href="Articles.html">Articles</a>
+    </div>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    <div class="About">
+      <a href="AboutUs.html">About Us</a>
+    </div>
+    
+    <br>
+    <div class="Contact">
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+    <br>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+    }
+  </script>
+
+
+  <div class="planner-container">
+    
+    <label for="day-select"><b>Select a Day:</b></label>
+    <select id="day-select" onchange="loadMealForDay()">
+      <option value="">-- Choose Day --</option>
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+      <option value="sunday">Sunday</option>
+    </select>
+
+    <div id="meal-display" class="meal-display"></div>
+    
+  </div>
+ 
+  <script src="mealplanner.js"></script>
+</body>
+</html>

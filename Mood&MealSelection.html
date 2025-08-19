@@ -1,0 +1,71 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood & Meals Dashboard</title>
+  <link rel="stylesheet" href="Mood&MealSelection.css" />
+</head>
+<body>
+
+  <!-- Header with Menu Button -->
+  <header>
+    <a class="back-button" href="indexpage.html"><b>← Back</b></a>
+    <div class="logo">Mood & Meals </div>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+<div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="About">
+      <a href="Articles.html">Articles</a>
+    </div>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    <div class="About">
+      <a href="AboutUs.html">About Us</a>
+    </div>
+    
+    <br>
+    <div class="Contact">
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+    <br>
+    
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+    }
+  </script>
+  <div class="dashboard-container">
+    <h1 class="welcome">Welcome to Mood & Meals</h1>
+    <br>
+    <div class="features-row">
+      <a href="mood.html" class="feature-card mood-card">        
+        <h2>Mood & Mental Wellness</h2>
+        
+        <img src="mood.jpg" alt="Mood" />
+      </a>
+      <a href="meal.html" class="feature-card meal-card">
+        <h2>Healthy Meal Planner</h2>
+        
+        <img src="meal.jpg" alt="Meal" />
+      </a>
+    </div>
+  </div>
+  
+</body>
+</html>

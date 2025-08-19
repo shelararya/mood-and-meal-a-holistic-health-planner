@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mood & Meals</title>
+  <link rel="stylesheet" href="indexpage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header with Menu Button -->
+  <header>
+    <div class="logo">🧠🥗Mood & Meals - A Holistic Health Planner</div>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+  <!-- Slide-in Menu -->
+  <div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <br>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="About">
+      <a href="Articles.html">Articles</a>
+    </div>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    <div class="About">
+      <a href="AboutUs.html">About Us</a>
+    </div>
+    
+    <br>
+    <div class="Contact">
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+    <br>
+    
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+    }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Mood & Meals</h1>
+      <p>Nourish your body with every bite, Calm your mind with every breath.</p>
+      <a href="login.html" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  
+ 
+
+</body>
+</html>

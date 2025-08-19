@@ -1,0 +1,119 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f9fa; /* soft light background instead of plain white */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section */
+.contact-hero {
+  height: 50px;
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* slightly smaller text */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;  /* thinner border */
+  color: white;
+  font-size: 17px;            /* smaller text */
+  padding: 8px 20px;          /* less padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.contact-section h2 {
+  font-size: 37px;
+  color: #2e657d;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 23px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #2e5d7d;
+  font-size: 23px;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.submit-btn:hover {
+  background-color: #1b425e;
+}
+
+.section1 {
+  text-align: center;
+  font-size: 25px;
+  padding: 40px 20px;
+  background-color: #f0f4f6; /* light grey-blue to break up the white */
+}
+
+.section1 h2 {
+  color: #2e597d;
+}
+
+footer {
+  text-align: center;
+  font-size: 23px;
+  padding: 20px;
+  background: #416577;
+  color: white;
+}

@@ -1,0 +1,117 @@
+/* General page styles */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffffff;
+}
+
+/* Container for the whole content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Back Button Left */
+.back-button {
+    position: absolute;
+  left: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;  /* thinner border */
+  color: white;
+  font-size: 17px;            /* smaller text */
+  padding: 8px 20px;          /* less padding */
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* Heading Style */
+.heading {
+  height: 50px; /* reduced height */
+  background-color: #416577;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* slightly smaller text */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.book-heading{
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Each book section */
+.book-box {
+  text-align: justify;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Book cover image */
+.book-box img {
+  width: 300px;
+  height: auto;
+  /* margin-right: 20px; */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  display: block;
+  margin:0 auto;
+}
+
+/* Book detail table */
+.book-box table {
+  width: 500px;
+  border-collapse: collapse;
+  margin-top: 30px;
+  position:relative;
+  right:200px;
+  left: 180px;
+}
+
+
+.book-box th,
+.book-box td {
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.book-box th {
+  width: 130px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Paragraph below the table */
+.book-box p {
+  clear: both;
+  padding-top: 15px;
+  line-height: 1.6;
+  font-size: 22px;
+}
+
+/* Links inside table or paragraph */
+a {
+  color: #2867fa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .book-box img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+

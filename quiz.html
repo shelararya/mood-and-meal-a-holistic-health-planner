@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stress Level Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  
+  <!-- Header with Menu Button -->
+  <header>
+<a class="back-button" href="mood.html"><b>← Back</b></a>
+    <div class="logo">🧠 Stress Level Quiz</div>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+  <!-- Slide-in Menu -->
+  <div id="sideMenu" class="slide-menu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <br>
+    <h1>Menu</h1>
+    <br><hr><br>
+    <div class="About">
+      <a href="Articles.html">Articles</a>
+    </div>
+    
+    <br>
+    <div class="Book">
+      <a href="Book.html">Book</a>
+    </div>
+    
+    <br>
+    <div class="About">
+      <a href="AboutUs.html">About Us</a>
+    </div>
+    
+    <br>
+    <div class="Contact">
+        <a href="ContactUs.html">Contact Us</a>
+    </div>
+    <br>
+    
+    </div>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+    }
+  </script>
+
+  </header>
+  <div class="quiz-container">
+    
+    <form id="quizForm">
+      <div class="question">
+        <label for="q1">1. How often do you feel anxious or tense?</label>
+        <select id="q1" name="q1" required>
+          <option value="">--Select--</option>
+          <option value="1">Rarely</option>
+          <option value="2">Sometimes</option>
+          <option value="3">Often</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="q2">2. How well do you sleep at night?</label>
+        <select id="q2" name="q2" required>
+          <option value="">--Select--</option>
+          <option value="1">Very well</option>
+          <option value="2">Okay</option>
+          <option value="3">Poorly</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="q3">3. How do you feel about your daily workload?</label>
+        <select id="q3" name="q3" required>
+          <option value="">--Select--</option>
+          <option value="1">Manageable</option>
+          <option value="2">A bit overwhelming</option>
+          <option value="3">Extremely stressful</option>
+        </select>
+      </div>
+      
+      <button type="submit">Submit</button>
+    </form>
+    
+    <div class="result" id="result"></div>
+  </div>
+  
+  <script src="quiz.js"></script>
+</body>
+</html>
